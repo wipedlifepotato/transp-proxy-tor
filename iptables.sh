@@ -7,17 +7,17 @@ function checkIptables() {
 }
 function restore_rules(){
 # i got that part for internet is optional
-#sudo iptables -P INPUT ACCEPT
-#sudo iptables -P FORWARD ACCEPT
-#sudo iptables -P OUTPUT ACCEPT
-#sudo iptables -F
-#sudo iptables -X
-#sudo iptables -t nat -F
-#sudo iptables -t nat -X
-#sudo iptables -t mangle -F
-#sudo iptables -t mangle -X
-#sudo iptables -t raw -F
-#sudo iptables -t raw -X
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+sudo iptables -F
+sudo iptables -X
+sudo iptables -t nat -F
+sudo iptables -t nat -X
+sudo iptables -t mangle -F
+sudo iptables -t mangle -X
+sudo iptables -t raw -F
+sudo iptables -t raw -X
 	iptables-restore < $iptables_rules_path
 }
 function save_rules(){
@@ -42,7 +42,7 @@ _dns_port="5353"
 _virt_addr="10.192.0.0/10"
 
 # Your outgoing interface
-_out_if="eth0"
+_out_if="wlan0"
 
 # LAN destinations that shouldn't be routed through Tor
 _non_tor="127.0.0.0/8 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16"
