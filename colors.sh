@@ -1,4 +1,5 @@
 #!/bin/bash
+## found in internet. Author -  Shakiba Moshiri
 # Reset
 Color_Off='\033[0m'       # Text Reset
 
